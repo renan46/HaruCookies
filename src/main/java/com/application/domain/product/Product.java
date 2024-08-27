@@ -2,8 +2,6 @@ package com.application.domain.product;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
-
 @Table(name="product")
 @Entity(name="product")
 @EqualsAndHashCode(of = "id")
@@ -33,13 +31,14 @@ public class Product {
 //    private Date updated_at;
 
     public Product(RequestProduct requestProduct){
-        this.nome = requestProduct.name();
+        this.nome = requestProduct.nome();
         this.descricao = requestProduct.descricao();
         this.categoria = requestProduct.categoria();
         this.preco = requestProduct.preco();
         this. estoque = requestProduct.estoque();
         this.venda_id = requestProduct.venda_id();
-
+//        this.created_at = requestProduct.created_at();
+//        this.updated_at = requestProduct.updated_at;
 
     }
 

@@ -37,7 +37,7 @@ public class ProductController {
         if(optionalProduct.isPresent()){
            // Product product = repository.getReferenceById(data.id());
             Product product = optionalProduct.get();
-            product.setNome(data.name());
+            product.setNome(data.nome());
             product.setDescricao(data.descricao());
             product.setCategoria(data.categoria());
             product.setPreco(data.preco());
